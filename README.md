@@ -1,4 +1,4 @@
-# 🚀 Frontend My Turno - (Html - Tailwind CSS - ReactJS) 🚀
+# 🚀 My Turno - (Html - Tailwind CSS - ReactJS) 🚀
 
 Desarrollo Frontend para crear la interfaz de la aplicación para obtener un turno.
 
