@@ -1,0 +1,7 @@
+.button-primary {
+  @apply py-3 px-4 text-xl text-center tracking-[0.92px] text-app-white-color font-black bg-app-gray-4 rounded-[31px];
+}
+
+.button-secondary {
+  @apply py-3 px-4 border-2 text-xl text-center tracking-[0.92px] text-app-primary-color font-black bg-app-white-color border-app-primary-color rounded-[31px];
+}
