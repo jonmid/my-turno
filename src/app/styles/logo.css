@@ -1,0 +1,7 @@
+.logo {
+  @apply flex place-content-center py-10 px-20 max-w-[430px] bg-app-white-color shadow-md rounded-t-[3px] rounded-br-[63px] rounded-bl-[3px];
+}
+
+.logo__img {
+  @apply max-w-[266px] object-cover;
+}
