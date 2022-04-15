@@ -1,0 +1,31 @@
+# 🚀 Frontend My Turno - (Html - Tailwind CSS - ReactJS) 🚀
+
+Proyecto para crear el frontend de la aplicación para obtener un turno.
+
+## 🛠️ Instalación
+
+Para utilizar este proyecto primero instale las dependencias:
+
+```bash
+npm install
+```
+
+## 🕹 Uso
+
+```bash
+npm run dev
+```
+
+## 🧑🏻 Author
+
+**Jhonatan Mideros**
+
+- 💻 [Profile](https://github.com/jonmid 'Jhonatan Mideros')
+
+- 📬 [Email](mailto:jonmid.mideros@gmail.com?subject=Hi%20from%20Project%20GitHub 'Hi!')
+
+- 📌 [Website](https://portafolio-jonmid.vercel.app/ 'Welcome')
+
+## 📝 Licencia
+
+[MIT](https://choosealicense.com/licenses/mit/)
