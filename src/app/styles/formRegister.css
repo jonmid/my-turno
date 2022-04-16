@@ -1,0 +1,15 @@
+.form-register {
+  @apply grid grid-cols-2 gap-y-8 gap-x-5 max-w-sm;
+}
+
+.form-register label {
+  @apply pb-1 px-3 border-b border-app-gray-8;
+}
+
+.form-register select {
+  @apply w-full text-sm tracking-[0.6px] text-app-gray-8 border-none appearance-none bg-transparent focus:outline-none;
+}
+
+.form-register input {
+  @apply w-full text-sm tracking-[0.6px] text-app-gray-8 placeholder-app-gray-8 border-none appearance-none bg-transparent focus:outline-none;
+}

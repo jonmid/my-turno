@@ -13,7 +13,10 @@ module.exports = {
         'app-gray-4': '#3F3F41',
         'app-gray-5': '#2D2D2D',
         'app-gray-6': '#A5A5A5',
-        'app-gray-7': '#CBCBCB'
+        'app-gray-7': '#CBCBCB',
+        'app-gray-8': '#474747',
+        'app-gray-8': '#7D7D7D',
+        'app-gray-9': '#59595C'
       }
     }
   },
