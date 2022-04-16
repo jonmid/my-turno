@@ -1,0 +1,43 @@
+.info {
+  @apply flex;
+}
+
+.info-section__left {
+  @apply flex flex-col;
+}
+
+.info-section__right {
+  @apply grid grid-rows-[1fr_auto] justify-center justify-items-end gap-9 w-full;
+}
+
+.info__detail {
+  @apply flex flex-col pt-20 pl-28;
+}
+
+.info__detail h1 {
+  @apply mb-16 text-2xl font-medium text-app-primary-color;
+}
+
+.info__detail h1 > span {
+  @apply font-black;
+}
+
+.info__detail > p {
+  @apply mb-5 text-app-gray-5 font-semibold;
+}
+
+.info__detail-list {
+  @apply mb-16 space-y-4;
+}
+
+.info__detail-list li {
+  @apply flex items-center space-x-5;
+}
+
+.info__detail-list--circle {
+  @apply flex items-center justify-center h-7 w-7 text-[13px] font-black text-app-white-color bg-app-primary-color rounded-full;
+}
+
+.info__detail-list--title {
+  @apply text-lg text-app-gray-4;
+}
