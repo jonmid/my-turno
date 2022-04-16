@@ -1,0 +1,3 @@
+.icon-arrow {
+  @apply flex items-center space-x-3 text-lg tracking-[0.72px] text-app-black-color cursor-pointer;
+}

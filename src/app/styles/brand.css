@@ -3,7 +3,7 @@
 }
 
 .brand__svg {
-  @apply max-w-[122px];
+  @apply w-[122px];
 }
 
 .brand__info {

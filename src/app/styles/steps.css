@@ -11,7 +11,7 @@
 }
 
 .steps__circle--active > span {
-  @apply text-base font-black text-app-white-color;
+  @apply text-base font-black text-app-white-color select-none;
 }
 
 .steps__line--inactive {
@@ -23,5 +23,5 @@
 }
 
 .steps__circle--inactive > span {
-  @apply text-base font-black text-app-primary-color;
+  @apply text-base font-black text-app-primary-color select-none;
 }

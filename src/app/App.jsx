@@ -1,12 +1,10 @@
 import React from 'react'
-import { FormRegister } from './components/FormRegister'
+import { Header } from './components/Header'
 
 const App = () => {
   return (
     <>
-      <h1 className='text-3xl font-bold underline'>My Turno</h1>
-      <br />
-      <FormRegister />
+      <Header />
     </>
   )
 }
