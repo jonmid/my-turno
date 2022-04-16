@@ -1,0 +1,27 @@
+.steps {
+  @apply flex items-center space-x-2;
+}
+
+.steps__line--active {
+  @apply w-[62px] border-t-[5px] border-dotted border-app-primary-color;
+}
+
+.steps__circle--active {
+  @apply flex justify-center items-center h-9 w-9 bg-app-primary-color rounded-full;
+}
+
+.steps__circle--active > span {
+  @apply text-base font-black text-app-white-color;
+}
+
+.steps__line--inactive {
+  @apply w-[62px] border-t-[5px] border-dotted border-app-gray-7;
+}
+
+.steps__circle--inactive {
+  @apply flex justify-center items-center h-9 w-9 border-2 bg-app-white-color border-app-primary-color rounded-full;
+}
+
+.steps__circle--inactive > span {
+  @apply text-base font-black text-app-primary-color;
+}

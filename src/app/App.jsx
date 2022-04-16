@@ -1,12 +1,12 @@
 import React from 'react'
-import { ItemLocation } from './components/ItemLocation'
+import { Steps } from './components/Steps'
 
 const App = () => {
   return (
     <>
       <h1 className='text-3xl font-bold underline'>My Turno</h1>
       <br />
-      <ItemLocation />
+      <Steps position={2} />
     </>
   )
 }
