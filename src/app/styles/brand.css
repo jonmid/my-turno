@@ -1,0 +1,15 @@
+.brand {
+  @apply max-w-[122px] text-app-black-color;
+}
+
+.brand__svg {
+  @apply max-w-[122px];
+}
+
+.brand__info {
+  @apply mt-3 text-[10px] text-right text-app-gray-3 tracking-[0.4px];
+}
+
+.brand__info--span {
+  @apply font-black;
+}

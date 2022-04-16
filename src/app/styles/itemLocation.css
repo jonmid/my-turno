@@ -1,0 +1,15 @@
+.item-location {
+  @apply flex place-items-center space-x-4;
+}
+
+.item-location__radio {
+  @apply h-4 w-4;
+}
+
+.item-location__info > h3 {
+  @apply text-base font-black tracking-[0.52px] text-app-gray-4;
+}
+
+.item-location__info > p {
+  @apply text-[10px] font-semibold text-app-gray-6;
+}
