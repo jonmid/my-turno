@@ -1,5 +1,5 @@
 .logo {
-  @apply flex place-content-center py-10 px-20 max-w-[430px] bg-app-white-color shadow-lg rounded-t-[3px] rounded-br-[63px] rounded-bl-[3px];
+  @apply flex place-content-center py-10 px-20 max-w-[430px] bg-app-white-color shadow-lg rounded-t-[3px] rounded-br-[63px] rounded-bl-[3px] cursor-pointer;
 }
 
 .logo__img {

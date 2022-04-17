@@ -1,17 +1,26 @@
-import React from 'react'
+import React, { useEffect, useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './../styles/site.css'
-import { Header } from './../components/Header'
+import { StoreContext } from './../store/Store'
 import { ItemSite } from './../components/ItemSite'
 import { Button } from './../components/Button'
 
 const Site = () => {
+  const { setPositionStep } = useContext(StoreContext)
+  const navigate = useNavigate()
+
+  const handleClickRegister = () => {
+    setPositionStep(2)
+    navigate(`/steps/register`)
+  }
+
+  useEffect(() => {
+    setPositionStep(1)
+  }, [])
+
   return (
     <div className='site'>
-      <div className='col-span-2'>
-        <Header />
-      </div>
-
       <div className='site-list'>
         <h1 className='site-list--title'>
           Selecciona la <br /> oficina mas cercana
@@ -40,7 +49,7 @@ const Site = () => {
           <ItemSite />
         </div>
 
-        <Button type='button' text='Seleccionar' classStyle='button-primary' />
+        <Button type='button' text='Seleccionar' classStyle='button-primary' eventOnClick={handleClickRegister} />
       </div>
 
       <div className='site-map'>Poner mapa</div>

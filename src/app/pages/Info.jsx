@@ -1,12 +1,22 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './../styles/info.css'
+import { StoreContext } from './../store/Store'
 import ImgInfo from './../../assets/img/img-info.svg'
 import { Logo } from './../components/Logo'
 import { Brand } from './../components/Brand'
 import { Button } from './../components/Button'
 
 const Info = () => {
+  const { setPositionStep } = useContext(StoreContext)
+  const navigate = useNavigate()
+
+  const handleClickSteps = () => {
+    setPositionStep(1)
+    navigate(`/steps`)
+  }
+
   return (
     <div className='info'>
       <section className='info-section__left'>
@@ -47,7 +57,7 @@ const Info = () => {
             </li>
           </ul>
 
-          <Button type='button' text='Solicitar turno' classStyle='button-primary' />
+          <Button type='button' text='Solicitar turno' classStyle='button-primary' eventOnClick={handleClickSteps} />
         </div>
       </section>
 

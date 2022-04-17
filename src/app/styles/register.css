@@ -1,9 +1,9 @@
 .register {
-  @apply grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] overflow-auto;
+  @apply grid grid-cols-[auto_1fr];
 }
 
 .register-section__form {
-  @apply flex flex-col pl-28 pt-16 overflow-auto;
+  @apply flex flex-col pl-28 pt-16;
 }
 
 .register-section__form > h1 {

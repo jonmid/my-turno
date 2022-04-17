@@ -1,0 +1,3 @@
+.layout-pages {
+  @apply grid grid-rows-[auto_1fr] overflow-auto;
+}

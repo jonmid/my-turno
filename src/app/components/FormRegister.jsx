@@ -1,10 +1,20 @@
-import React from 'react'
+import React, { useContext } from 'react'
+import { useNavigate } from 'react-router-dom'
 
 import './../styles/formRegister.css'
+import { StoreContext } from './../store/Store'
 import { Button } from './Button'
 import { ItemSite } from './ItemSite'
 
 const FormRegister = () => {
+  const { setPositionStep } = useContext(StoreContext)
+  const navigate = useNavigate()
+
+  const handleClickGenerateTurn = () => {
+    setPositionStep(3)
+    navigate(`/steps/generate`)
+  }
+
   return (
     <form className='form-register'>
       <label htmlFor='type-identification' className='flex  items-center col-span-2'>
@@ -44,7 +54,7 @@ const FormRegister = () => {
       </div>
 
       <div className='col-span-2 px-8'>
-        <Button type='button' text='Siguiente' classStyle='button-primary' />
+        <Button type='button' text='Siguiente' classStyle='button-primary' eventOnClick={handleClickGenerateTurn} />
       </div>
     </form>
   )
