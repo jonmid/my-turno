@@ -1,6 +1,8 @@
 import React from 'react'
 
 import './../styles/formRegister.css'
+import { Button } from './Button'
+import { ItemSite } from './ItemSite'
 
 const FormRegister = () => {
   return (
@@ -36,6 +38,14 @@ const FormRegister = () => {
       <label htmlFor='second-surname'>
         <input id='second-surname' name='second-surname' type='text' placeholder='Segundo apellido' />
       </label>
+
+      <div className='col-span-2'>
+        <ItemSite onlyText={true} />
+      </div>
+
+      <div className='col-span-2 px-8'>
+        <Button type='button' text='Siguiente' classStyle='button-primary' />
+      </div>
     </form>
   )
 }

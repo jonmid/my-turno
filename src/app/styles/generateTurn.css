@@ -1,0 +1,31 @@
+.generate-turn {
+  @apply grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] overflow-auto;
+}
+
+.generate-turn__info {
+  @apply flex flex-col pl-28 pt-16 overflow-auto;
+}
+
+.generate-turn__info > h1 {
+  @apply mb-12 text-2xl font-black text-app-primary-color;
+}
+
+.generate-turn__info > h3 {
+  @apply mb-4 text-2xl font-black tracking-wider text-app-gray-3;
+}
+
+.generate-turn__data {
+  @apply flex flex-col mb-12;
+}
+
+.generate-turn__data > h2 {
+  @apply text-2xl font-black tracking-wider text-app-gray-3;
+}
+
+.generate-turn__data > span {
+  @apply mt-1 text-base font-medium tracking-wider text-app-gray-5;
+}
+
+.generate-turn__img {
+  @apply flex-1 grid justify-center pt-20;
+}

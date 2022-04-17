@@ -2,11 +2,13 @@ import React from 'react'
 
 import './../styles/itemSite.css'
 
-const ItemSite = () => {
+const ItemSite = ({ onlyText = false }) => {
+  const style = onlyText ? 'item-site-onlytext' : 'item-site'
+
   return (
-    <div className='item-site'>
+    <div className={style}>
       {/* <input type='radio' name='sede' value='item' className='item-site__radio' checked /> */}
-      <input type='radio' name='sede' value='item' className='item-site__radio' />
+      {!onlyText && <input type='radio' name='sede' value='item' className='item-site__radio' />}
 
       <section className='item-site__info'>
         <h3>Sede 1</h3>

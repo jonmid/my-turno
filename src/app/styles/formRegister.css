@@ -10,6 +10,6 @@
   @apply w-full text-sm tracking-[0.6px] text-app-gray-8 border-none appearance-none bg-transparent focus:outline-none;
 }
 
-.form-register input {
+.form-register > label input {
   @apply w-full text-sm tracking-[0.6px] text-app-gray-8 placeholder-app-gray-8 border-none appearance-none bg-transparent focus:outline-none;
 }

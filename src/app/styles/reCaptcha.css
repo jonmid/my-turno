@@ -1,0 +1,11 @@
+.recaptcha {
+  @apply flex items-center px-8 py-4 border bg-app-white-color rounded-lg shadow-md;
+}
+
+.recaptcha__title {
+  @apply flex-1 text-sm text-app-gray-4;
+}
+
+.recaptcha__img {
+  @apply w-16;
+}

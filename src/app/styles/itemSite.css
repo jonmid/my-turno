@@ -2,6 +2,10 @@
   @apply flex place-items-center space-x-4 py-4 border-b border-app-gray-11;
 }
 
+.item-site-onlytext {
+  @apply flex place-items-center space-x-4 py-4;
+}
+
 .item-site__radio {
   @apply h-4 w-4;
 }

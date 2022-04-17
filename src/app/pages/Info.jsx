@@ -1,7 +1,7 @@
 import React from 'react'
 
 import './../styles/info.css'
-import ImgInfo from './../../assets/icons/img-info.svg'
+import ImgInfo from './../../assets/img/img-info.svg'
 import { Logo } from './../components/Logo'
 import { Brand } from './../components/Brand'
 import { Button } from './../components/Button'
@@ -52,8 +52,10 @@ const Info = () => {
       </section>
 
       <section className='info-section__right'>
-        <img src={ImgInfo} alt='img-info' className='mt-24' />
-        <Brand />
+        <div className='info-section__right--img'>
+          <img src={ImgInfo} alt='img-info' />
+          <Brand />
+        </div>
       </section>
     </div>
   )

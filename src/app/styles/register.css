@@ -1,0 +1,15 @@
+.register {
+  @apply grid grid-cols-[auto_1fr] grid-rows-[auto_1fr] overflow-auto;
+}
+
+.register-section__form {
+  @apply flex flex-col pl-28 pt-16 overflow-auto;
+}
+
+.register-section__form > h1 {
+  @apply mb-12 text-2xl font-black text-app-primary-color;
+}
+
+.register-section__img {
+  @apply flex-1 grid justify-center pt-44;
+}
