@@ -5,10 +5,10 @@ import ArrowSVG from './../../assets/icons/arrow.svg?component'
 
 const ToReturn = () => {
   return (
-    <di className='icon-arrow'>
+    <div className='icon-arrow'>
       <ArrowSVG />
       <span>atras</span>
-    </di>
+    </div>
   )
 }
 

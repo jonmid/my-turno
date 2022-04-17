@@ -1,11 +1,11 @@
 import React from 'react'
 
-import { Info } from './pages/Info'
+import { Site } from './pages/Site'
 
 const App = () => {
   return (
-    <div className='w-screen'>
-      <Info />
+    <div className='grid h-screen w-screen'>
+      <Site />
     </div>
   )
 }

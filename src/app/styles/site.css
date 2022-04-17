@@ -1,0 +1,23 @@
+/* .site {
+  @apply h-full;
+}
+
+.site-main {
+  @apply flex h-full;
+}
+
+.site-main__list {
+  @apply flex flex-col px-12 shadow-xl;
+}
+
+.site-main__list > h1 {
+  @apply mt-10 mb-6 text-2xl font-black text-app-primary-color;
+}
+
+.site-main__list svg {
+  @apply absolute h-5 w-5 right-3 bottom-2 text-app-gray-11;
+}
+
+.site-main__map {
+  @apply flex-1 grid place-content-center;
+} */
