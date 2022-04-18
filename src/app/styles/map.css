@@ -1,0 +1,7 @@
+.map {
+  @apply h-full w-full;
+}
+
+.map-mark {
+  @apply w-24 px-4 py-2 border text-app-white-color bg-app-primary-color rounded-xl shadow-md;
+}

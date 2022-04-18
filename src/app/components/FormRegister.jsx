@@ -1,5 +1,6 @@
-import React, { useContext } from 'react'
+import React, { useContext, useEffect } from 'react'
 import { useNavigate } from 'react-router-dom'
+import { useForm } from 'react-hook-form'
 
 import './../styles/formRegister.css'
 import { StoreContext } from './../store/Store'
@@ -7,18 +8,39 @@ import { Button } from './Button'
 import { ItemSite } from './ItemSite'
 
 const FormRegister = () => {
-  const { setPositionStep } = useContext(StoreContext)
+  const { setPositionStep, selectionSite, saveDataRegisterUser } = useContext(StoreContext)
   const navigate = useNavigate()
+  const { register, handleSubmit } = useForm()
+  const onSubmit = data => {
+    const validate = data.typeidentification !== '' && data.identification !== '' && data.firstname !== '' && data.lastname !== ''
 
-  const handleClickGenerateTurn = () => {
-    setPositionStep(3)
-    navigate(`/steps/generate`)
+    if (validate) {
+      saveDataRegisterUser({
+        identification: data.identification,
+        firstname: data.firstname,
+        secondname: data.secondname,
+        lastname: data.lastname,
+        secondsurname: data.secondsurname
+      })
+      setPositionStep(3)
+      navigate(`/steps/generate`)
+    } else {
+      console.log('Error en la validacion del formulario')
+    }
   }
 
+  const handleClickGenerateTurn = () => {}
+
+  useEffect(() => {
+    if (selectionSite.length === 0) {
+      navigate(`/steps`)
+    }
+  }, [])
+
   return (
-    <form className='form-register'>
+    <form className='form-register' onSubmit={handleSubmit(onSubmit)}>
       <label htmlFor='type-identification' className='flex  items-center col-span-2'>
-        <select id='type-identification' name='type-identification'>
+        <select {...register('typeidentification')} id='typeidentification' name='typeidentification'>
           <option value=''>Tipo de identificación</option>
           <option value='cedula'>Cédula de ciudadanía</option>
           <option value='pasaporte'>Pasaporte</option>
@@ -30,31 +52,33 @@ const FormRegister = () => {
       </label>
 
       <label htmlFor='identification' className='col-span-2'>
-        <input id='identification' name='identification' type='text' placeholder='Número de documento' />
+        <input {...register('identification')} id='identification' name='identification' type='text' placeholder='Número de documento' />
       </label>
 
       <label htmlFor='first-name'>
-        <input id='first-name' name='first-name' type='text' placeholder='Primer nombre' />
+        <input {...register('firstname')} id='firstname' name='firstname' type='text' placeholder='Primer nombre' />
       </label>
 
       <label htmlFor='second-name'>
-        <input id='second-name' name='second-name' type='text' placeholder='Segundo nombre' />
+        <input {...register('secondname')} id='secondname' name='secondname' type='text' placeholder='Segundo nombre' />
       </label>
 
       <label htmlFor='last-name'>
-        <input id='last-name' name='last-name' type='text' placeholder='Primer apellido' />
+        <input {...register('lastname')} id='lastname' name='lastname' type='text' placeholder='Primer apellido' />
       </label>
 
       <label htmlFor='second-surname'>
-        <input id='second-surname' name='second-surname' type='text' placeholder='Segundo apellido' />
+        <input {...register('secondsurname')} id='secondsurname' name='secondsurname' type='text' placeholder='Segundo apellido' />
       </label>
 
-      <div className='col-span-2'>
-        <ItemSite onlyText={true} />
-      </div>
+      {selectionSite.length > 0 && (
+        <div className='col-span-2'>
+          <ItemSite onlyText={true} data={selectionSite[0]} />
+        </div>
+      )}
 
       <div className='col-span-2 px-8'>
-        <Button type='button' text='Siguiente' classStyle='button-primary' eventOnClick={handleClickGenerateTurn} />
+        <Button type='submit' text='Siguiente' classStyle='button-primary' eventOnClick={handleClickGenerateTurn} />
       </div>
     </form>
   )

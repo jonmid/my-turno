@@ -1,0 +1,23 @@
+.content-modal {
+  @apply w-96 p-10 text-center bg-app-white-color rounded-2xl opacity-100;
+}
+
+.content-modal--img {
+  @apply w-60 object-cover;
+}
+
+.content-modal--title {
+  @apply mt-10 mb-9 text-2xl font-black text-app-primary-color;
+}
+
+.content-modal--info {
+  @apply flex flex-col space-y-3 mb-10;
+}
+
+.content-modal p {
+  @apply text-lg text-app-gray-8;
+}
+
+.content-modal span {
+  @apply text-lg font-black text-app-gray-4;
+}

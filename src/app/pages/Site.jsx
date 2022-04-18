@@ -3,16 +3,20 @@ import { useNavigate } from 'react-router-dom'
 
 import './../styles/site.css'
 import { StoreContext } from './../store/Store'
+import Sites from './../utilities/places.json'
 import { ItemSite } from './../components/ItemSite'
 import { Button } from './../components/Button'
+import { Map } from './../components/Map'
 
 const Site = () => {
-  const { setPositionStep } = useContext(StoreContext)
+  const { setPositionStep, selectItemSite } = useContext(StoreContext)
   const navigate = useNavigate()
 
   const handleClickRegister = () => {
-    setPositionStep(2)
-    navigate(`/steps/register`)
+    if (selectItemSite) {
+      setPositionStep(2)
+      navigate(`/steps/register`)
+    }
   }
 
   useEffect(() => {
@@ -35,24 +39,19 @@ const Site = () => {
         </div>
 
         <div className='site-list__items'>
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
-          <ItemSite />
+          {Sites.map(item => {
+            return <ItemSite key={item.id} data={item} />
+          })}
         </div>
 
         <Button type='button' text='Seleccionar' classStyle='button-primary' eventOnClick={handleClickRegister} />
+
+        {!selectItemSite && <div className='mt-4 text-red-500 text-center font-medium'>Seleccionar oficina mas cercana</div>}
       </div>
 
-      <div className='site-map'>Poner mapa</div>
+      <div>
+        <Map sites={Sites} />
+      </div>
     </div>
   )
 }
