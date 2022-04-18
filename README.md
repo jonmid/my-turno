@@ -16,6 +16,8 @@ npm install
 npm run dev
 ```
 
+Abrir el proyecto con la URL: [http://localhost:3000/](http://localhost:3000/ 'Link')
+
 ## 🧑🏻 Author
 
 **Jhonatan Mideros**
